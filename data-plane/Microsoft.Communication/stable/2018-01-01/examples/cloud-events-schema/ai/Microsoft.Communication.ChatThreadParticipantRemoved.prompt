@@ -1,0 +1,42 @@
+Desired fields with the cloud events schema:
+{
+  "source": "/subscriptions/{subscription-id}/resourcegroups/{group-name}/providers/microsoft.communication/communicationservices/{communication-services-resource-name}",
+  "subject": "thread/{thread-id}/participantremoved/{rawId}",
+  "type": "Microsoft.Communication.ChatThreadParticipantRemoved",
+  "time": "2021-02-20T00:56:18.8567210Z",
+  "id": "6ed810fd-8776-4b13-81c2-1a0c4f791a07",
+  "data": {
+    "time": "2021-02-19T16:56:18.1118825-08:00",
+    "removedByCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "participantRemoved": {
+      "displayName": "Shawn",
+      "participantCommunicationIdentifier": {
+        "rawId": "{rawId}",
+        "communicationUser": {
+          "id": "{rawId}"
+        }
+      }
+    },
+    "createTime": "2021-02-19T16:31:54.365-08:00",
+    "version": 1613782578096,
+    "threadId": "{thread-id}",
+    "transactionId": "zGCq8IGRr0aEF6COuy7wSA.1.1.1.1.978649284.1"
+  },
+  "specversion": "1.0"
+}
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+
+[QUESTION]
+
+Output:

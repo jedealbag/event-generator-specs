@@ -1,0 +1,30 @@
+Desired fields with the cloud events schema:
+{
+  "id": "{rawId}",
+  "source": "/subscriptions/{subscription-id}/resourceGroups/{group-name}/providers/Microsoft.Communication/communicationServices/{communication-services-resource-name}",
+  "subject": "thread/{thread-id}/participantRemoved/{rawId}/recipient/{rawId}",
+  "data": {
+    "sender": "test2@contoso.org",
+    "recipient": "test1@contoso.com",
+    "messageId": "{messageId}",
+    "status": "delivered",
+    "deliveryAttemptTimeStamp": "{deliveryAttemptTimestamp}"
+  },
+  "type": "Microsoft.Communication.EmailDeliveryReportReceived",
+  "time": "{deliveryAttemptTimestamp} ",
+  "specversion": "1.0"
+}
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+- {messageId} random sha1 in lowercase
+- {deliveryAttemptTimestamp} random datetime
+
+
+[QUESTION]
+
+Output:

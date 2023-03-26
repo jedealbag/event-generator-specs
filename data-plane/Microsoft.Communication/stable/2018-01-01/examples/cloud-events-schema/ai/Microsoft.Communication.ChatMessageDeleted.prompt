@@ -1,0 +1,45 @@
+Desired fields with the cloud events schema:
+{
+  "source": "/subscriptions/{subscription-id}/resourceGroups/{group-name}/providers/Microsoft.Communication/communicationServices/{communication-services-resource-name}",
+  "subject": "thread/{thread-id}/sender/{rawId}/recipient/{rawId}",
+  "type": "Microsoft.Communication.ChatMessageDeleted",
+  "time": "2021-02-19T00:43:10.9982947Z",
+  "id": "23cfcc13-33f2-4ae1-8d23-b5015b05302b",
+  "data": {
+    "deleteTime": "2021-02-19T00:43:10.14Z",
+    "messageId": "1613695388152",
+    "senderId": "{rawId}",
+    "senderCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "senderDisplayName": "Bob(Admin)",
+    "composeTime": "2021-02-19T00:43:08.152Z",
+    "type": "Text",
+    "version": 1613695390361,
+    "recipientId": ""{rawId}",
+    "recipientCommunicationIdentifier": {
+      "rawId": ""{rawId}",
+      "communicationUser": {
+        "id": ""{rawId}"
+      }
+    },
+    "transactionId": "fFs4InlBn0O/0WyhfQZVSQ.1.1.2.1.1867776045.1.4",
+    "threadId": "19:48899258eec941e7a281e03edc8f4964@thread.v2"
+  },
+  "specversion": "1.0"
+}
+
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+
+[QUESTION]
+
+Output:

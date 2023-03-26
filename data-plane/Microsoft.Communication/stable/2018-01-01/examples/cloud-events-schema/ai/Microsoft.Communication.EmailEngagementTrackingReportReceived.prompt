@@ -1,0 +1,31 @@
+Desired fields with the cloud events schema:
+{
+  "id": "{rawId}",
+  "source": "/subscriptions/{subscription-id}/resourceGroups/{group-name}/providers/Microsoft.Communication/communicationServices/{communication-services-resource-name}",
+  "subject": "sender/{rawId}/message/{messageId}",
+  "data": {
+    "sender": "test2@contoso.org",
+    "messageId": "{rawId}",
+    "userActionTimeStamp": "{deliveryAttemptTimestamp}",
+    "engagementContext": "www.example.com",
+    "userAgent": "Desktop",
+    "engagementType": "click"
+  },
+  "type": "Microsoft.Communication.EmailEngagementTrackingReportReceived",
+  "time": "{deliveryAttemptTimestamp}",
+  "specversion": "1.0"
+}
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+- {deliveryAttemptTimestamp} random datetime 
+- {transactionId} random sha1 in lowercase 
+- {messageId} random guid
+
+[QUESTION]
+
+Output:

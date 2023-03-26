@@ -1,0 +1,73 @@
+Desired fields with the cloud events schema:
+{
+  "source": "/subscriptions/{subscription-id}/resourceGroups/{group-name}/providers/Microsoft.Communication/communicationServices/{communication-services-resource-name}",
+  "subject": "thread/{thread-id}/createdBy/{rawId}/recipient/{rawId}",
+  "type": "Microsoft.Communication.ChatThreadCreatedWithUser",
+  "time": "2021-02-18T23:47:34.7437103Z",
+  "id": "eba02b2d-37bf-420e-8656-3a42ef74c435",
+  "data": {
+    "createdBy": "{rawId}",
+    "createdByCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "properties": {
+      "topic": "Chat about new commuication services"
+    },
+    "members": [
+      {
+        "displayName": "Bob",
+        "memberId": "{rawId}"
+      },
+      {
+        "displayName": "John",
+        "memberId": "{rawId}"
+      }
+    ],
+    "participants": [
+      {
+        "displayName": "Bob",
+        "participantCommunicationIdentifier": {
+          "rawId": "{rawId}",
+          "communicationUser": {
+            "id": "{rawId}"
+          }
+        }
+      },
+      {
+        "displayName": "John",
+        "participantCommunicationIdentifier": {
+          "rawId": "{rawId}",
+          "communicationUser": {
+            "id": "{rawId}"
+          }
+        }
+      }
+    ],
+    "createTime": "2021-02-18T23:47:26.91Z",
+    "version": 1613692046910,
+    "recipientId": "{rawId}",
+    "recipientCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "transactionId": "zbZt+9h/N0em+XCW2QvyIA.1.1.1.1.1737228330.0.1737490483.1.6",
+    "threadId": "{thread-id}"
+  },
+  "specversion": "1.0"
+}
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+
+[QUESTION]
+
+Output:

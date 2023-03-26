@@ -1,0 +1,44 @@
+Desired fields with the cloud events schema:
+{
+  "source": "/subscriptions/{subscription-id}/resourceGroups/{group-name}/providers/Microsoft.Communication/communicationServices/{communication-services-resource-name}",
+  "subject": "thread/{thread-id}/editedBy/{rawId}/recipient/{rawId}",
+  "type": "Microsoft.Communication.ChatThreadPropertiesUpdatedPerUser",
+  "time": "2021-02-19T00:28:29.5597260Z",
+  "id": "d57342ff-264e-4a5e-9c54-ef05b7d50082",
+  "data": {
+    "editedBy": "{rawId}",
+    "editedByCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "editTime": "2021-02-19T00:28:28.7390282Z",
+    "properties": {
+      "topic": "Communication in Azure"
+    },
+    "createTime": "2021-02-19T00:28:25.864Z",
+    "version": 1613694508719,
+    "recipientId": "{rawId}",
+    "recipientCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "transactionId": "WLXPrnJ/I0+LTj2cwMrNMQ.1.1.1.1.1833369763.1.4",
+    "threadId": "{thread-id}"
+  },
+  "specversion": "1.0"
+}
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+
+[QUESTION]
+
+Output:

@@ -1,0 +1,50 @@
+Desired fields with the cloud events schema:
+{
+  "source": "/subscriptions/{subscription-id}/resourceGroups/{group-name}/providers/Microsoft.Communication/communicationServices/{communication-services-resource-name}",
+  "subject": "thread/{thread-id}/participantRemoved/{rawId}/recipient/{rawId}",
+  "type": "Microsoft.Communication.ChatParticipantRemovedFromThreadWithUser",
+  "time": "2021-02-25T06:40:24.2244945Z",
+  "id": "e8a4df24-799d-4c53-94fd-1e05703a4549",
+  "data": {
+    "time": "{deliveryAttemptTimestamp}",
+    "removedByCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "participantRemoved": {
+      "displayName": "Bob",
+      "participantCommunicationIdentifier": {
+        "rawId": "{rawId}",
+        "communicationUser": {
+          "id": "{rawId}"
+        }
+      }
+    },
+    "recipientCommunicationIdentifier": {
+      "rawId": "{rawId}",
+      "communicationUser": {
+        "id": "{rawId}"
+      }
+    },
+    "createTime": "{deliveryAttemptTimestamp}",
+    "version": 1614235220325,
+    "transactionId": "{transactionId}",
+    "threadId": "{thread-id}"
+  },
+  "specversion": "1.0"
+}
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+- {deliveryAttemptTimestamp} random datetime 
+- {transactionId} random sha1 in lowercase 
+
+[QUESTION]
+
+Output:

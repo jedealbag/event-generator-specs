@@ -1,0 +1,44 @@
+Desired fields with the cloud events schema:
+{
+  "source": "/subscriptions/{subscription-id}/resourcegroups/{group-name}/providers/microsoft.communication/communicationservices/{communication-services-resource-name}",
+  "subject": "/recording/call/{call-id}/recordingId/{recording-id}",
+  "type": "Microsoft.Communication.RecordingFileStatusUpdated",
+  "time": "2021-07-27T15:20:34.2199328Z",
+  "id": "7283825e-f8f1-4c61-a9ea-752c56890500",
+  "data": {
+    "recordingStorageInfo": {
+      "recordingChunks": [
+        {
+          "documentId": "{rawId}",
+          "index": 0,
+          "endReason": "SessionEnded",
+          "contentLocation": "https://storage.asm.skype.com/v1/objects/{rawId}/content/video",
+          "metadataLocation": "https://storage.asm.skype.com/v1/objects/{rawId}/content/acsmetadata",
+          "deleteLocation": "https://storage.asm.skype.com/v1/objects/{rawId}/content/deletedata"
+        }
+      ]
+    },
+    "recordingStartTime": "{deliveryAttemptTimestamp}",
+    "recordingDurationMs": 6620,
+    "sessionEndReason": "CallEnded",
+    "recordingContentType": "Audio",
+    "recordingChannelType": "Mixed",
+    "recordingFormatType": "Mp3"
+  },
+  "specversion": "1.0"
+}
+
+Desired variables:
+- {communication-services-resource-name} random lowercase words
+- {rawId} random guid
+- {subscription-id} random guid
+- {call-id} random guid
+- {recording-id} random guid
+- {group-name} random lowercase words
+- {thread-id} random guid
+- {deliveryAttemptTimestamp} random datetime 
+- {transactionId} random sha1 in lowercase 
+
+[QUESTION]
+
+Output:
